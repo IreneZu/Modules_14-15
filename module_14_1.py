@@ -2,7 +2,6 @@
 # # Задача "Первые пользователи":
 
 import sqlite3
-import random
 
 connection = sqlite3.connect("not_telegram.db")
 cursor = connection.cursor()
@@ -24,7 +23,6 @@ for i in range(1, 10+1):
 cursor.execute("UPDATE Users SET balance = ? WHERE (age / 10) % 2 = ?", (500, 1))
 
 cursor.execute("DELETE FROM Users WHERE (age / 10) % 3 = ?", (1,))
-# SELECT FROM WHERE GROUP BY HAVING ORDER BY
 
 cursor.execute("SELECT username, email, age, balance FROM Users WHERE age != ?", (60,))
 
