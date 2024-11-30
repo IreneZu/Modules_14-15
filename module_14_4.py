@@ -14,7 +14,6 @@ import crud_functions
 #cursor = connection.cursor()
 
 API = "myAPI"
-API = "7532614252:AAE5-oPls4i1iuS5BerHdssba_dj0JK5wiE"
 
 bot = Bot(token=API)
 dp = Dispatcher(bot, storage=MemoryStorage())
