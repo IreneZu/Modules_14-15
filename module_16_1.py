@@ -5,8 +5,9 @@ from fastapi import FastAPI
 
 app = FastAPI()
 
+
 @app.get("/user/admin")
-async def welcom() -> str:
+async def admin() -> str:
     return "Вы вошли как администратор"
 
 
@@ -20,10 +21,7 @@ async def user_info(username: str="III", age: int = 18) -> str:
     return f"Информация о пользователе. Имя: {username}, возраст: {age}"
 #   /user?username=Irene&age=11
 
+
 @app.get("/")
 async def welcom() -> str:
     return "Главная страница"
-
-#   python3 -m uvicorn main:app
-#   uvicorn main:app --
-#   http://127.0.0.1:8000
